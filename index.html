@@ -11,8 +11,8 @@
   <meta property="og:url" content="https://karisajoshua.github.io/">
   <title>Joshua Karisa — Terminal Portfolio</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=4">
-  <script src="script.js?v=4" defer></script>
+  <link rel="stylesheet" href="styles.css?v=5">
+  <script src="script.js?v=5" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -20,7 +20,7 @@
 <header class="terminal-bar">
   <div class="shell terminal-bar-inner">
     <a class="terminal-title" href="#top"><span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span><strong>joshua@portfolio</strong><span>:~</span></a>
-    <nav aria-label="Terminal navigation"><a href="#work">./work</a><a href="#skills">./toolkit</a><a href="#about">./about</a><a href="#contact">./contact</a></nav>
+    <nav aria-label="Terminal navigation"><a href="#work">./work</a><a href="#github">./github</a><a href="#skills">./toolkit</a><a href="#about">./about</a><a href="#contact">./contact</a></nav>
   </div>
 </header>
 <aside class="system-hud" aria-hidden="true"><div><span>SYS</span><b id="sys-state">BOOT</b></div><div><span>CPU</span><b id="cpu">12%</b></div><div><span>MEM</span><b id="mem">38%</b></div><div><span>NET</span><b id="net">ONLINE</b></div><div class="hud-progress"><i id="scroll-progress"></i></div></aside><main id="main">
@@ -57,6 +57,22 @@
       <article class="repo-row reveal"><div class="repo-meta"><span>06</span><span class="badge">PLATFORM</span></div><div><h2>Blue Flame Cargo</h2><p>A TypeScript business application from my logistics and operational-platform work.</p><div class="terminal-tags"><span>TypeScript</span><span>Web app</span></div></div><a href="https://github.com/karisajoshua/blueflamecargo" target="_blank" rel="noopener noreferrer">github ↗</a></article>
     </div>
     <p class="terminal-line reveal"><span class="prompt">joshua@github:~/projects$</span> <a class="command-link" href="https://github.com/karisajoshua?tab=repositories" target="_blank" rel="noopener noreferrer">open --all-repositories ↗</a></p>
+  </section>
+
+  <section class="terminal-section shell github-telemetry" id="github">
+    <div class="section-command reveal"><span class="prompt">joshua@github:~$</span> <span class="command">githubctl telemetry --user karisajoshua --live</span></div>
+    <div class="github-livebar reveal"><span><i></i> PUBLIC GITHUB TELEMETRY</span><span id="gh-sync">connecting...</span></div>
+    <div class="github-stats reveal">
+      <div><span>PUBLIC REPOS</span><strong id="gh-repos">--</strong><small>profile total</small></div>
+      <div><span>FOLLOWERS</span><strong id="gh-followers">--</strong><small>public profile</small></div>
+      <div><span>FOLLOWING</span><strong id="gh-following">--</strong><small>public profile</small></div>
+      <div><span>STARS</span><strong id="gh-stars">--</strong><small>loaded public repos</small></div>
+    </div>
+    <div class="github-grid">
+      <div class="github-panel reveal"><div class="panel-head"><span>LANGUAGE SIGNAL</span><b>bytes by public repo</b></div><div id="gh-languages" class="language-bars"><p class="telemetry-loading">querying languages...</p></div></div>
+      <div class="github-panel reveal"><div class="panel-head"><span>REPOSITORY PROCESSES</span><b>recently updated</b></div><div id="gh-recent" class="repo-processes"><p class="telemetry-loading">loading processes...</p></div></div>
+    </div>
+    <p class="github-source reveal">source: GitHub public API · values refresh when this page loads · contribution totals are intentionally not fabricated</p>
   </section>
 
   <section class="terminal-section shell" id="skills">
