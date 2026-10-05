@@ -3,60 +3,93 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b1524">
-  <meta name="description" content="Joshua Karisa is a software engineer building web applications, secure integrations, and practical business systems. Explore selected work and technologies.">
+  <meta name="theme-color" content="#050806">
+  <meta name="description" content="Joshua Karisa is a software engineer building web applications, secure integrations, cloud systems, and practical business software.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Joshua Karisa — Software Engineer">
   <meta property="og:description" content="Selected systems, engineering work, and the technologies behind them.">
   <meta property="og:url" content="https://karisajoshua.github.io/">
-  <title>Joshua Karisa — Software Engineer</title>
+  <title>Joshua Karisa — Terminal Portfolio</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=2">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script src="script.js?v=3" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell nav-wrap">
-      <a class="brand" href="#top" aria-label="Joshua Karisa, back to top"><span class="brand-mark">JK<span>.</span></span><span class="brand-name">Joshua Karisa</span></a>
-      <nav aria-label="Main navigation">
-        <a href="#work">Work</a><a href="#skills">Toolkit</a><a href="#about">About</a><a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
-      </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scanlines" aria-hidden="true"></div>
+<header class="terminal-bar">
+  <div class="shell terminal-bar-inner">
+    <a class="terminal-title" href="#top"><span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span><strong>joshua@portfolio</strong><span>:~</span></a>
+    <nav aria-label="Terminal navigation"><a href="#work">./work</a><a href="#skills">./toolkit</a><a href="#about">./about</a><a href="#contact">./contact</a></nav>
+  </div>
+</header>
+<main id="main">
+  <section class="terminal-section hero shell" id="top">
+    <div class="terminal-window hero-terminal">
+      <div class="window-chrome"><div><span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span></div><span>joshua@portfolio: ~/profile</span><span>bash</span></div>
+      <div class="terminal-body">
+        <p class="terminal-line reveal"><span class="prompt">joshua@github:~$</span> <span class="command">whoami</span></p>
+        <div class="output reveal">
+          <p class="ascii-name">JOSHUA KARISA</p>
+          <p class="role">Software Engineer <span>·</span> Security-Conscious Systems <span>·</span> Cloud <span>·</span> AI &amp; Automation</p>
+        </div>
+        <p class="terminal-line reveal"><span class="prompt">joshua@github:~$</span> <span class="command">cat mission.txt</span></p>
+        <p class="terminal-output reveal">I build secure, production-minded digital systems that turn complex workflows into useful software.</p>
+        <p class="terminal-line reveal"><span class="prompt">joshua@github:~$</span> <span class="command">location --current</span></p>
+        <p class="terminal-output reveal">Nairobi, Kenya <span class="ok">● available for engineering collaboration</span></p>
+        <p class="terminal-line reveal"><span class="prompt">joshua@github:~$</span> <span class="command">ls ./focus</span></p>
+        <div class="terminal-grid reveal"><span>full-stack-systems/</span><span>application-security/</span><span>cloud-delivery/</span><span>apis-integrations/</span><span>ai-automation/</span><span>technical-ai-safety/</span></div>
+        <p class="terminal-line active-line"><span class="prompt">joshua@github:~$</span> <span class="cursor"></span></p>
+      </div>
     </div>
-  </header>
-  <main id="main">
-    <section class="hero shell" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="signal" aria-hidden="true"></span> SOFTWARE ENGINEER · NAIROBI, KENYA</p>
-        <h1 id="hero-title">Building systems<br>that <em>make sense.</em></h1>
-        <p class="hero-lede">I’m Joshua Karisa. I turn complex workflows into useful software—from business platforms and API integrations to security-minded tools.</p>
-        <div class="hero-actions"><a class="button primary" href="#work">Explore my work <span aria-hidden="true">↘</span></a><a class="text-link" href="https://github.com/karisajoshua" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a></div>
-        <div class="hero-rule"><span>FULL-STACK DEVELOPMENT</span><span>SECURE INTEGRATIONS</span><span>PRACTICAL DELIVERY</span></div>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
-        <div class="node node-one"><span class="node-icon">{ }</span><span>BUILD</span></div>
-        <div class="node node-two"><span class="node-icon">↔</span><span>CONNECT</span></div>
-        <div class="node node-three"><span class="node-icon">◇</span><span>SECURE</span></div>
-        <div class="art-core"><span class="core-top">ENGINEERING / 01</span><strong>Ideas<br><i>→</i> systems.</strong><span class="core-bottom">THINK · DESIGN · SHIP</span></div>
-        <span class="art-coordinate coord-one">01 / 03</span><span class="art-coordinate coord-two">N 01° 17′</span>
-      </div>
-    </section>
-    <div class="ticker" aria-hidden="true"><div class="ticker-inner">THOUGHTFUL ENGINEERING <span>✳</span> USEFUL SOFTWARE <span>✳</span> CLEAR SYSTEMS <span>✳</span> THOUGHTFUL ENGINEERING <span>✳</span> USEFUL SOFTWARE <span>✳</span> CLEAR SYSTEMS <span>✳</span></div></div>
-    <section class="section shell work" id="work" aria-labelledby="work-title">
-      <div class="section-heading"><div><p class="section-kicker">01 / SELECTED WORK</p><h2 id="work-title">Work with<br><em>real moving parts.</em></h2></div><p>Applications and tools where product thinking meets implementation. Each project links to public code where available.</p></div>
-      <div class="project-grid">
-        <article class="project-card featured zest"><div class="card-top"><span class="project-index">01 / PLATFORM</span><span class="status">Active development</span></div><div class="project-visual visual-zest" aria-hidden="true"><div class="visual-window"><div class="window-bar"><span></span><span></span><span></span><b>zest / workspace</b></div><div class="mock-content"><div class="mock-side"><i></i><i></i><i></i><i></i></div><div class="mock-main"><div class="mock-line long"></div><div class="mock-metrics"><i></i><i></i><i></i></div><div class="mock-chart"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="mock-row"></div><div class="mock-row short"></div></div></div></div><span class="visual-caption">Conceptual interface illustration</span></div><div class="card-body"><div class="card-title-row"><h3>Zest</h3><span class="arrow" aria-hidden="true">↗</span></div><p>A multi-agency insurance application covering clients and vehicles, quotations, policies, invoices, renewals, reporting, and workflow automation. The repository also includes DMVIC integration code.</p><div class="tag-row"><span>TypeScript</span><span>React</span><span>Supabase</span><span>Integrations</span></div><a class="card-link" href="https://github.com/karisajoshua/pixel-perfect-clone-94206-250aa43a" target="_blank" rel="noopener noreferrer" aria-label="Explore Zest source on GitHub">Explore source <span aria-hidden="true">↗</span></a></div></article>
-        <article class="project-card featured symbiont"><div class="card-top"><span class="project-index">02 / EXPLORATION</span><span class="status muted">Prototype</span></div><div class="project-visual visual-symbiont" aria-hidden="true"><div class="radar-grid"></div><div class="radar-circle one"></div><div class="radar-circle two"></div><div class="radar-circle three"></div><div class="radar-axis x"></div><div class="radar-axis y"></div><span class="radar-dot a"></span><span class="radar-dot b"></span><span class="radar-dot c"></span><span class="radar-dot d"></span><div class="radar-label">SENTIMENT / LOCATION</div><span class="visual-caption">Conceptual data visualization</span></div><div class="card-body"><div class="card-title-row"><h3>Symbiont</h3><span class="arrow" aria-hidden="true">↗</span></div><p>A sentiment and geographic dashboard prototype. It stores agent reports in Supabase and uses an AI function to classify sample posts; the local feeds are simulated, not live social ingestion.</p><div class="tag-row"><span>React</span><span>Supabase</span><span>AI function</span><span>Data UI</span></div><a class="card-link" href="https://github.com/karisajoshua/symbiont" target="_blank" rel="noopener noreferrer" aria-label="Explore Symbiont source on GitHub">Explore source <span aria-hidden="true">↗</span></a></div></article>
-        <article class="project-card compact"><div class="compact-symbol" aria-hidden="true">⌘</div><div class="compact-copy"><span class="project-index">03 / SECURITY</span><h3>Malware Scanner Service</h3><p>A C# security-focused service in my public project collection.</p><div class="tag-row"><span>C#</span><span>Security</span></div></div><a class="stretch-link" href="https://github.com/karisajoshua/MalwareScannerService" target="_blank" rel="noopener noreferrer" aria-label="View Malware Scanner Service on GitHub"><span aria-hidden="true">↗</span></a></article>
-        <article class="project-card compact"><div class="compact-symbol" aria-hidden="true">↔</div><div class="compact-copy"><span class="project-index">04 / BUSINESS TOOLS</span><h3>Blue Flame Cargo</h3><p>A TypeScript application among my business platform projects.</p><div class="tag-row"><span>TypeScript</span><span>Web app</span></div></div><a class="stretch-link" href="https://github.com/karisajoshua/blueflamecargo" target="_blank" rel="noopener noreferrer" aria-label="View Blue Flame Cargo on GitHub"><span aria-hidden="true">↗</span></a></article>
-      </div>
-      <a class="all-work" href="https://github.com/karisajoshua?tab=repositories" target="_blank" rel="noopener noreferrer">See more on GitHub <span aria-hidden="true">↗</span></a>
-    </section>
-    <section class="section skills-section" id="skills" aria-labelledby="skills-title"><div class="shell"><div class="section-heading"><div><p class="section-kicker">02 / TOOLKIT</p><h2 id="skills-title">The tools behind<br><em>the work.</em></h2></div><p>Technologies from my CV and project work. Depth varies by tool; the public repositories show implementation examples.</p></div><div class="skill-groups"><div class="skill-group"><h3><span>01</span> Applications &amp; backend</h3><div class="skill-list"><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/react/react-original.svg" alt="" loading="lazy">React</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/angular/angular-original.svg" alt="" loading="lazy">Angular</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/react/react-original.svg" alt="" loading="lazy">React Native</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/typescript/typescript-original.svg" alt="" loading="lazy">TypeScript</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/javascript/javascript-original.svg" alt="" loading="lazy">JavaScript</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/nodejs/nodejs-original.svg" alt="" loading="lazy">Node.js</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/java/java-original.svg" alt="" loading="lazy">Java</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/spring/spring-original.svg" alt="" loading="lazy">Spring Boot</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/spring/spring-original.svg" alt="" loading="lazy">Spring Security</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/csharp/csharp-original.svg" alt="" loading="lazy">C#</span></div></div><div class="skill-group"><h3><span>02</span> Data &amp; integration</h3><div class="skill-list"><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/supabase/supabase-original.svg" alt="" loading="lazy">Supabase</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/postgresql/postgresql-original.svg" alt="" loading="lazy">PostgreSQL</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/mysql/mysql-original.svg" alt="" loading="lazy">MySQL</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/mongodb/mongodb-original.svg" alt="" loading="lazy">MongoDB</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/apachekafka/apachekafka-original.svg" alt="" loading="lazy">Apache Kafka</span><span>REST APIs</span></div></div><div class="skill-group"><h3><span>03</span> Cloud &amp; delivery</h3><div class="skill-list"><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="" loading="lazy">AWS</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/vercel/vercel-original.svg" alt="" loading="lazy">Vercel</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/docker/docker-original.svg" alt="" loading="lazy">Docker</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/git/git-original.svg" alt="" loading="lazy">Git</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/github/github-original.svg" alt="" loading="lazy">GitHub</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/githubactions/githubactions-original.svg" alt="" loading="lazy">GitHub Actions</span><span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/linux/linux-original.svg" alt="" loading="lazy">Linux</span></div></div><div class="skill-group"><h3><span>04</span> Security &amp; systems</h3><div class="skill-list"><span>Secure development</span><span>API security</span><span>Assembly</span><span>System design</span></div></div></div><p class="skill-note">A representative selection. <a href="https://github.com/karisajoshua/karisajoshua" target="_blank" rel="noopener noreferrer">See my GitHub profile for the wider stack ↗</a></p></div></section>
-    <section class="section shell about-section" id="about" aria-labelledby="about-title"><div class="about-layout"><div><p class="section-kicker">03 / ABOUT</p><h2 id="about-title">Curious about<br><em>what comes next.</em></h2></div><div class="about-copy"><p>I’m a Kenya-based software engineer building web applications, APIs, and business platforms. I care about systems that are understandable, maintainable, and useful to the people who rely on them.</p><p>My interests extend into secure systems, cloud infrastructure, and reliable integrations. I’m also exploring technical AI safety—particularly the infrastructure, evaluation tooling, and security practices that can make AI systems more reliable.</p><div class="about-link"><a href="https://texcortech.co.ke/" target="_blank" rel="noopener noreferrer">Texcortech Systems <span aria-hidden="true">↗</span></a><small>Current part-time work</small></div></div></div></section>
-    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="shell contact-inner"><p class="section-kicker">04 / CONNECT</p><h2 id="contact-title">Have something<br><em>worth building?</em></h2><p>Let’s talk about software, integrations, or a challenging system problem.</p><div class="contact-links"><a href="https://www.linkedin.com/in/joshua-karisa-b0b684163/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/karisajoshua" target="_blank" rel="noopener noreferrer">Explore GitHub <span aria-hidden="true">↗</span></a></div></div></section>
-  </main>
-  <footer class="site-footer"><div class="shell footer-inner"><span>© <span id="year">2026</span> Joshua Karisa</span><span>Designed and built with intention.</span><a href="#top">Back to top ↑</a></div></footer>
+    <div class="scroll-hint">SCROLL TO EXECUTE <span>↓</span></div>
+  </section>
+
+  <section class="terminal-section shell" id="work">
+    <div class="section-command reveal"><span class="prompt">joshua@github:~$</span> <span class="command">find ./projects -type flagship --sort impact</span></div>
+    <div class="command-result reveal"><span>6 results</span><span>permissions: public where available</span></div>
+    <div class="repo-list">
+      <article class="repo-row reveal"><div class="repo-meta"><span>01</span><span class="badge active">ACTIVE</span></div><div><h2>Zest</h2><p>Multi-agency insurance platform covering clients, vehicles, quotations, policies, invoices, renewals, reporting, workflow automation and integration code.</p><div class="terminal-tags"><span>TypeScript</span><span>React</span><span>Supabase</span><span>Integrations</span></div></div><a href="https://github.com/karisajoshua/pixel-perfect-clone-94206-250aa43a" target="_blank" rel="noopener noreferrer">github ↗</a></article>
+      <article class="repo-row reveal"><div class="repo-meta"><span>02</span><span class="badge">PROTOTYPE</span></div><div><h2>Symbiont</h2><p>Geographic reporting and sentiment-analysis prototype using Supabase report feeds and AI-assisted classification.</p><div class="terminal-tags"><span>React</span><span>Supabase</span><span>AI</span><span>Data UI</span></div></div><a href="https://github.com/karisajoshua/symbiont" target="_blank" rel="noopener noreferrer">github ↗</a></article>
+      <article class="repo-row reveal"><div class="repo-meta"><span>03</span><span class="badge active">BUILD</span></div><div><h2>Sprints</h2><p>Project and program management platform with authenticated workspaces, Scrum workflows, organization context and specialized team operating modes.</p><div class="terminal-tags"><span>React</span><span>TypeScript</span><span>Supabase</span><span>Workspaces</span></div></div><a href="https://github.com/karisajoshua/sprints" target="_blank" rel="noopener noreferrer">github ↗</a></article>
+      <article class="repo-row reveal"><div class="repo-meta"><span>04</span><span class="badge">SECURITY</span></div><div><h2>Malware Scanner Service</h2><p>A C# security-focused malware-scanning implementation from my public engineering collection.</p><div class="terminal-tags"><span>C#</span><span>Security</span></div></div><a href="https://github.com/karisajoshua/MalwareScannerService" target="_blank" rel="noopener noreferrer">github ↗</a></article>
+      <article class="repo-row reveal"><div class="repo-meta"><span>05</span><span class="badge">SECURITY</span></div><div><h2>Simple Encryption Tool</h2><p>An applied-security implementation focused on encryption concepts and practical tooling.</p><div class="terminal-tags"><span>Security</span><span>Encryption</span></div></div><a href="https://github.com/karisajoshua/Simple-Encryption-Tool" target="_blank" rel="noopener noreferrer">github ↗</a></article>
+      <article class="repo-row reveal"><div class="repo-meta"><span>06</span><span class="badge">PLATFORM</span></div><div><h2>Blue Flame Cargo</h2><p>A TypeScript business application from my logistics and operational-platform work.</p><div class="terminal-tags"><span>TypeScript</span><span>Web app</span></div></div><a href="https://github.com/karisajoshua/blueflamecargo" target="_blank" rel="noopener noreferrer">github ↗</a></article>
+    </div>
+    <p class="terminal-line reveal"><span class="prompt">joshua@github:~/projects$</span> <a class="command-link" href="https://github.com/karisajoshua?tab=repositories" target="_blank" rel="noopener noreferrer">open --all-repositories ↗</a></p>
+  </section>
+
+  <section class="terminal-section shell" id="skills">
+    <div class="section-command reveal"><span class="prompt">joshua@github:~$</span> <span class="command">cat engineering_profile.yml</span></div>
+    <div class="code-panel reveal">
+      <div><span class="key">applications:</span> <span class="value">[React, Angular, React Native, TypeScript, JavaScript, Node.js, Java, Spring Boot, C#]</span></div>
+      <div><span class="key">data:</span> <span class="value">[Supabase, PostgreSQL, MySQL, MongoDB, Apache Kafka]</span></div>
+      <div><span class="key">interfaces:</span> <span class="value">[REST APIs, webhooks, third-party integrations]</span></div>
+      <div><span class="key">cloud_delivery:</span> <span class="value">[AWS, Vercel, Docker, GitHub Actions, Linux]</span></div>
+      <div><span class="key">security:</span> <span class="value">[secure development, API security, access control, system design]</span></div>
+      <div><span class="key">current_focus:</span> <span class="value">[AI automation, evaluations, security, reliability]</span></div>
+    </div>
+    <p class="terminal-line reveal"><span class="prompt">joshua@github:~$</span> <span class="command">echo $ENGINEERING_PRINCIPLES</span></p>
+    <div class="principles reveal"><span>01 ship useful systems</span><span>02 secure boundaries</span><span>03 make failure observable</span><span>04 automate repeatable work</span><span>05 document decisions</span><span>06 keep learning</span></div>
+  </section>
+
+  <section class="terminal-section shell" id="about">
+    <div class="section-command reveal"><span class="prompt">joshua@github:~$</span> <span class="command">cat about.md</span></div>
+    <div class="about-terminal reveal">
+      <p><span>#</span> I’m a Kenya-based software engineer building web applications, APIs, integrations and business platforms.</p>
+      <p><span>##</span> I care about systems that are understandable, maintainable, secure and useful to the people who rely on them.</p>
+      <p><span>##</span> My interests extend into cloud infrastructure and technical AI safety—especially evaluation tooling, security practices, reliability and oversight.</p>
+      <p><span>→</span> Current engineering work: <a href="https://texcortech.co.ke/" target="_blank" rel="noopener noreferrer">Texcortech Systems ↗</a></p>
+    </div>
+  </section>
+
+  <section class="terminal-section shell contact-terminal" id="contact">
+    <div class="section-command reveal"><span class="prompt">joshua@github:~$</span> <span class="command">./connect --open</span></div>
+    <div class="connect-output reveal"><p>Have a system worth building?</p><a href="https://www.linkedin.com/in/joshua-karisa-b0b684163/" target="_blank" rel="noopener noreferrer">linkedin://joshua-karisa ↗</a><a href="https://github.com/karisajoshua" target="_blank" rel="noopener noreferrer">github://karisajoshua ↗</a></div>
+    <p class="terminal-line reveal"><span class="prompt">joshua@github:~$</span> <span class="command">exit</span></p>
+    <p class="terminal-output reveal">Session complete. Thanks for visiting.</p>
+  </section>
+</main>
+<footer><div class="shell footer-line"><span>© <span id="year">2026</span> Joshua Karisa</span><span>status: <b>online</b></span><a href="#top">cd ~ ↑</a></div></footer>
 </body>
 </html>
