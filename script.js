@@ -20,3 +20,34 @@ if(hero&&!reduce){hero.addEventListener('pointermove',e=>{const r=hero.getBoundi
 
 const canvas=document.getElementById('matrix');
 if(canvas&&!reduce){const ctx=canvas.getContext('2d'),chars='01{}[]<>/\\$#@*+=-_';let cols=[],w,h;const resize=()=>{w=canvas.width=innerWidth;h=canvas.height=innerHeight;cols=Array(Math.ceil(w/20)).fill(1).map(()=>Math.random()*-60)};resize();addEventListener('resize',resize);const draw=()=>{ctx.fillStyle='rgba(5,8,6,.12)';ctx.fillRect(0,0,w,h);ctx.fillStyle='#4cff82';ctx.font='11px IBM Plex Mono, monospace';cols.forEach((y,i)=>{ctx.fillText(chars[Math.floor(Math.random()*chars.length)],i*20,y*20);cols[i]=y*20>h&&Math.random()>.985?0:y+.35});requestAnimationFrame(draw)};draw()}
+
+
+async function loadGitHubTelemetry(){
+  const sync=document.getElementById('gh-sync');
+  if(!sync)return;
+  try{
+    const headers={Accept:'application/vnd.github+json'};
+    const [profileRes,reposRes]=await Promise.all([
+      fetch('https://api.github.com/users/karisajoshua',{headers}),
+      fetch('https://api.github.com/users/karisajoshua/repos?per_page=100&sort=updated',{headers})
+    ]);
+    if(!profileRes.ok||!reposRes.ok)throw new Error('GitHub API unavailable');
+    const profile=await profileRes.json(),repos=await reposRes.json();
+    document.getElementById('gh-repos').textContent=profile.public_repos??'--';
+    document.getElementById('gh-followers').textContent=profile.followers??'--';
+    document.getElementById('gh-following').textContent=profile.following??'--';
+    document.getElementById('gh-stars').textContent=repos.reduce((n,r)=>n+(r.stargazers_count||0),0);
+    sync.textContent='synced '+new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
+    const languageCounts={};
+    repos.forEach(r=>{if(r.language)languageCounts[r.language]=(languageCounts[r.language]||0)+1});
+    const langs=Object.entries(languageCounts).sort((a,b)=>b[1]-a[1]).slice(0,7),max=langs[0]?.[1]||1;
+    const langBox=document.getElementById('gh-languages');
+    langBox.innerHTML=langs.length?langs.map(([name,count])=>`<div class="language-row"><span>${name}</span><div class="language-track"><i style="width:${count/max*100}%"></i></div><b>${count} repo${count===1?'':'s'}</b></div>`).join(''):'<p class="telemetry-loading">No language metadata returned.</p>';
+    const recent=document.getElementById('gh-recent');
+    recent.innerHTML=repos.slice(0,7).map(r=>`<div class="repo-process"><a href="${r.html_url}" target="_blank" rel="noopener noreferrer">${r.name}</a><small>${r.language||'mixed'} · updated ${new Date(r.updated_at).toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'})}</small><span>★ ${r.stargazers_count} · ⑂ ${r.forks_count}</span></div>`).join('');
+  }catch(error){
+    sync.textContent='offline / rate limited';
+    ['gh-languages','gh-recent'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML='<p class="github-error">Telemetry unavailable. GitHub may be rate-limiting anonymous requests; portfolio content remains available.</p>'});
+  }
+}
+loadGitHubTelemetry();
