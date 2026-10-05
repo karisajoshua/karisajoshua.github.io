@@ -11,23 +11,23 @@
   <meta property="og:url" content="https://karisajoshua.github.io/">
   <title>Joshua Karisa — Terminal Portfolio</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=3">
-  <script src="script.js?v=3" defer></script>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <script src="script.js?v=4" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="scanlines" aria-hidden="true"></div>
+<canvas id="matrix" aria-hidden="true"></canvas><div class="ambient-orb orb-one" aria-hidden="true"></div><div class="ambient-orb orb-two" aria-hidden="true"></div><div class="scanlines" aria-hidden="true"></div><div class="boot-screen" id="boot" aria-hidden="true"><div class="boot-log" id="boot-log"></div></div>
 <header class="terminal-bar">
   <div class="shell terminal-bar-inner">
     <a class="terminal-title" href="#top"><span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span><strong>joshua@portfolio</strong><span>:~</span></a>
     <nav aria-label="Terminal navigation"><a href="#work">./work</a><a href="#skills">./toolkit</a><a href="#about">./about</a><a href="#contact">./contact</a></nav>
   </div>
 </header>
-<main id="main">
+<aside class="system-hud" aria-hidden="true"><div><span>SYS</span><b id="sys-state">BOOT</b></div><div><span>CPU</span><b id="cpu">12%</b></div><div><span>MEM</span><b id="mem">38%</b></div><div><span>NET</span><b id="net">ONLINE</b></div><div class="hud-progress"><i id="scroll-progress"></i></div></aside><main id="main">
   <section class="terminal-section hero shell" id="top">
     <div class="terminal-window hero-terminal">
       <div class="window-chrome"><div><span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span></div><span>joshua@portfolio: ~/profile</span><span>bash</span></div>
-      <div class="terminal-body">
+      <div class="terminal-body" id="terminal-body"><div class="glitch-label" aria-hidden="true">PORTFOLIO_OS v2.6.10</div>
         <p class="terminal-line reveal"><span class="prompt">joshua@github:~$</span> <span class="command">whoami</span></p>
         <div class="output reveal">
           <p class="ascii-name">JOSHUA KARISA</p>
@@ -48,7 +48,7 @@
   <section class="terminal-section shell" id="work">
     <div class="section-command reveal"><span class="prompt">joshua@github:~$</span> <span class="command">find ./projects -type flagship --sort impact</span></div>
     <div class="command-result reveal"><span>6 results</span><span>permissions: public where available</span></div>
-    <div class="repo-list">
+    <div class="process-map reveal" aria-hidden="true"><div class="process-core">JK</div><span style="--i:0">BUILD</span><span style="--i:1">SECURE</span><span style="--i:2">SHIP</span><span style="--i:3">AUTOMATE</span><span style="--i:4">LEARN</span><span style="--i:5">SCALE</span></div><div class="repo-list">
       <article class="repo-row reveal"><div class="repo-meta"><span>01</span><span class="badge active">ACTIVE</span></div><div><h2>Zest</h2><p>Multi-agency insurance platform covering clients, vehicles, quotations, policies, invoices, renewals, reporting, workflow automation and integration code.</p><div class="terminal-tags"><span>TypeScript</span><span>React</span><span>Supabase</span><span>Integrations</span></div></div><a href="https://github.com/karisajoshua/pixel-perfect-clone-94206-250aa43a" target="_blank" rel="noopener noreferrer">github ↗</a></article>
       <article class="repo-row reveal"><div class="repo-meta"><span>02</span><span class="badge">PROTOTYPE</span></div><div><h2>Symbiont</h2><p>Geographic reporting and sentiment-analysis prototype using Supabase report feeds and AI-assisted classification.</p><div class="terminal-tags"><span>React</span><span>Supabase</span><span>AI</span><span>Data UI</span></div></div><a href="https://github.com/karisajoshua/symbiont" target="_blank" rel="noopener noreferrer">github ↗</a></article>
       <article class="repo-row reveal"><div class="repo-meta"><span>03</span><span class="badge active">BUILD</span></div><div><h2>Sprints</h2><p>Project and program management platform with authenticated workspaces, Scrum workflows, organization context and specialized team operating modes.</p><div class="terminal-tags"><span>React</span><span>TypeScript</span><span>Supabase</span><span>Workspaces</span></div></div><a href="https://github.com/karisajoshua/sprints" target="_blank" rel="noopener noreferrer">github ↗</a></article>
@@ -61,7 +61,7 @@
 
   <section class="terminal-section shell" id="skills">
     <div class="section-command reveal"><span class="prompt">joshua@github:~$</span> <span class="command">cat engineering_profile.yml</span></div>
-    <div class="code-panel reveal">
+    <div class="telemetry reveal" aria-hidden="true"><div class="wave"></div><div class="telemetry-copy"><b>ENGINEERING SIGNAL</b><span>architecture · delivery · security · automation</span></div></div><div class="code-panel reveal">
       <div><span class="key">applications:</span> <span class="value">[React, Angular, React Native, TypeScript, JavaScript, Node.js, Java, Spring Boot, C#]</span></div>
       <div><span class="key">data:</span> <span class="value">[Supabase, PostgreSQL, MySQL, MongoDB, Apache Kafka]</span></div>
       <div><span class="key">interfaces:</span> <span class="value">[REST APIs, webhooks, third-party integrations]</span></div>
